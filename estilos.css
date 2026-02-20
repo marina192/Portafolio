@@ -1,21 +1,221 @@
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+/* Base */
+* { box-sizing: border-box; }
+
+body{
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #f6f7fb;
+  color: #1f2937;
 }
 
-.container {
-    background: white;
-    border: 1px solid #ccc;
-    padding: 20px;
-    text-align: center;
+nav{
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 20px;
+  background: rgba(255,255,255,.9);
+  border-bottom: 1px solid #e5e7eb;
+  backdrop-filter: blur(8px);
 }
 
-@media (max-width: 768px) {
-    .grid {
-        grid-template-columns: 1fr;
-    }
-    .container {
-        grid-column: auto !important;
-    }
+nav a{
+  text-decoration: none;
+  color: #111827;
+  font-weight: 700;
+  letter-spacing: .2px;
+}
+
+nav > div{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #374151;
+  font-size: 14px;
+}
+
+nav i{
+  opacity: .85;
+  margin-right: 4px;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1100px;
+  margin: 24px auto;
+  padding: 0 16px 40px;
+}
+
+.container{
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 0 8px 18px rgba(0,0,0,.04);
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+
+.container:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(0,0,0,.06);
+  border-color: #dbe2ea;
+}
+
+.container h1{
+  margin: 6px 0 8px;
+  font-size: 32px;
+  line-height: 1.1;
+}
+
+.container h3{
+  margin: 0 0 12px;
+  font-size: 16px;
+  color: #111827;
+}
+
+.container p{
+  margin: 0 0 14px;
+  color: #4b5563;
+}
+
+.container span{
+  color: #6b7280;
+  font-size: 13px;
+}
+
+button{
+  border: 1px solid #e5e7eb;
+  background: #111827;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform .12s ease, opacity .12s ease, background .12s ease;
+  margin-right: 8px;
+}
+
+button:hover{
+  opacity: .92;
+  transform: translateY(-1px);
+}
+
+button + button{
+  background: #fff;
+  color: #111827;
+}
+
+button + button:hover{
+  background: #f3f4f6;
+}
+
+.container > div{
+  display: grid;
+  gap: 10px;
+}
+
+.container > div > div{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border: 1px solid #eef2f7;
+  border-radius: 12px;
+  background: #fafbff;
+}
+
+.container > div > div span:first-child{
+  font-size: 18px;
+  font-weight: 800;
+  color: #111827;
+}
+
+.container > div > div span:last-child{
+  font-size: 13px;
+  color: #6b7280;
+}
+
+@media (max-width: 768px){
+  .grid{ grid-template-columns: 1fr; }
+  .container{ grid-column: auto !important; }
+  .container h1{ font-size: 28px; }
+  nav{ flex-wrap: wrap; }
+}
+
+/* Modo oscuto */
+body.dark{
+  background: #0b1220;
+  color: #e5e7eb;
+}
+
+body.dark nav{
+  background: rgba(15, 23, 42, .9);
+  border-bottom-color: #243244;
+}
+
+body.dark nav a{
+  color: #e5e7eb;
+}
+
+body.dark nav > div{
+  color: #cbd5e1;
+}
+
+body.dark .container{
+  background: #0f172a;
+  border-color: #243244;
+  box-shadow: 0 8px 18px rgba(0,0,0,.35);
+}
+
+body.dark .container:hover{
+  border-color: #334155;
+  box-shadow: 0 12px 26px rgba(0,0,0,.5);
+}
+
+body.dark .container h3{
+  color: #e5e7eb;
+}
+
+body.dark .container p{
+  color: #cbd5e1;
+}
+
+body.dark .container span{
+  color: #94a3b8;
+}
+
+body.dark button{
+  background: #e5e7eb;
+  color: #0b1220;
+  border-color: #e5e7eb;
+}
+
+body.dark button + button{
+  background: transparent;
+  color: #e5e7eb;
+  border-color: #334155;
+}
+
+body.dark button + button:hover{
+  background: #111827;
+}
+
+body.dark .container > div > div{
+  background: #111827;
+  border-color: #243244;
+}
+
+body.dark .container > div > div span:first-child{
+  color: #e5e7eb;
+}
+
+body.dark .container > div > div span:last-child{
+  color: #94a3b8;
 }
