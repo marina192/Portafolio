@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    
+    <link rel="stylesheet" href="estilos.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+        rel="stylesheet"
+        />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+    <script
+        src="https://code.jquery.com/jquery-4.0.0.js"
+        integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U="
+        crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <a href="#">MariánSánchez</a>
+        <div>
+            <i class="bi bi-flag-fill"></i>Español
+            <i class="bi bi-flag"></i>Inglés
+        </div>
+        <div>
+            <label for="modo-oscuro">Modo oscuro</label>
+            <input type="checkbox" id="modo-oscuro">
+        </div>
+    </nav>
+
+    <div>
+        <div class="grid">
+            <div class="container" style="grid-column: 1 / span 2;">
+                <span>Desarrollador Jr Full-Stack</span>
+                <h1>Marián Sánchez</h1>
+                <p>Desarrollo de aplicaciones web y moviles con tecnologías modernas</p>
+                <button>Contactame</button>
+                <button>Ver proyectos</button>
+            </div>
+            <div class="container" style="grid-column: 3;">
+                <h3>Estadísticas</h3>
+                <div>
+                    <div>
+                        <span>10+</span>
+                        <span>Proyectos Completados</span>
+                        <i class="bi bi-speedometer2"></i>
+                    </div>
+                    <div>
+                        <span>2+</span>
+                        <span>Años de Experiencia</span>
+                        <i class="bi bi-journal-arrow-up"></i>
+                    </div>
+                    <div>
+                        <span>5</span>
+                        <span>Manejo de Lenguajes</span>
+                        <i class="bi bi-rocket-takeoff-fill"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container" style="grid-column: 1 / span 2;">Contenedor 3 (ocupa dos columnas)</div>
+            <div class="container" style="grid-column: 3;">
+                <h3>Lenguajes</h3>
+                <div>
+                    <div>
+                        <span>PHP</span>
+                    </div>
+                    <div>
+                        <span>JavaScript</span>
+                    </div>
+                    <div>
+                        <span>Python</span>
+                    </div>
+                    <div>
+                        <span>C</span>
+                    </div>
+                    <div>
+                        <span>HTML y CSS</span>
+                    </div>
+                    <div>
+                        <span>C#</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">Contenedor 5</div>
+            <div class="container">Contenedor 6</div>
+            <div class="container">Contenedor 7</div>
+        </div>
+    </div>
+
+    <script>
+        const checkbox = document.getElementById("modo-oscuro");
+        checkbox.addEventListener("change", () => {
+            document.body.classList.toggle("dark", checkbox.checked);
+        });
+    </script>
+</body>
+</html>
